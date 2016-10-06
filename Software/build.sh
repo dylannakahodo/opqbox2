@@ -24,29 +24,10 @@ fi
 
 cd  ${TRIGGERING_BUILD_DIR}
 	make
-<<<<<<< HEAD
-=======
 cd ${SRC_DIR}
 
 
 #Create Docs Directory and Generate Documentation
-if [ ! -d ${TRIGGERING_DOCS_DIR} ]; then
-	echo Creating a docs directory for Triggering ${TRIGGERING_DOCS_DIR}
-	mkdir -p ${TRIGGERING_DOCS_DIR}
-fi
-
-cd ${TRIGGERING_DOCS_DIR}
-	echo Creating Doxygen Config file
-	doxygen -g
-	echo Editing Project Name, Input Source, and Disabling Latex Output
-	sed -i 's;PROJECT_NAME           = "My Project";PROJECT_NAME           = "Triggering";' Doxyfile
-	sed -i 's;INPUT                  =;INPUT                  = ../../Triggering/lib;' Doxyfile
-	sed -i 's;GENERATE_LATEX         = YES;GENERATE_LATEX         = NO;' Doxyfile
-	doxygen Doxyfile
->>>>>>> upstream/ci
-cd ${SRC_DIR}
-
-#Generate Doxyfile and Create Docs Directory
 if [ ! -d ${TRIGGERING_DOCS_DIR} ]; then
 	echo Creating a docs directory for Triggering ${TRIGGERING_DOCS_DIR}
 	mkdir -p ${TRIGGERING_DOCS_DIR}
