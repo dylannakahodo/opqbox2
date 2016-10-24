@@ -55,7 +55,7 @@ cd ${FIRMWARE_DIR}
 	make opq.bin >> /dev/null
 cd ${SRC_DIR}
 
-#Create Firmware Documentation Directory and Generate Documentation
+#Create Firmware Documentation Directory and Generate Documentation.
 if [ ! -d ${FIRMWARE_DOCS_DIR} ]; then
 	echo Creating docs directory for Firmware ${FIRMWARE_DOCS_DIR}
 	mkdir -p ${FIRMWARE_DOCS_DIR}
